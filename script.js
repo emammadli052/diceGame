@@ -16,11 +16,16 @@ let playerTwoCurrentScore = document.querySelector('#score--1');
 // these values reflect both players scores and will be usefull for reset logic
 const playersOverallScore = document.querySelectorAll('.current-score');
 const playersCurrentScore = document.querySelectorAll('.score');
+// prompt for players name
+const playerOneName = document.querySelector('#name--0');
+const playerTwoName = document.querySelector('#name--1');
+
 // some intial values will be useful for resetting logic
 let sum = 0;
 let isPlayerOneTurn = true;
 let isPlayerTwoTurn = false;
-
+playerOneName.textContent = prompt('Enter name for first player please: ');
+playerTwoName.textContent = prompt('Enter name for second player please: ');
 // function to roll the dice
 const rollDice = () => {
   let random = Math.ceil(Math.random() * 6);
