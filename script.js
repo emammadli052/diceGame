@@ -24,8 +24,8 @@ const playerTwoName = document.querySelector('#name--1');
 let sum = 0;
 let isPlayerOneTurn = true;
 let isPlayerTwoTurn = false;
-playerOneName.textContent = prompt('Enter name for first player please: ');
-playerTwoName.textContent = prompt('Enter name for second player please: ');
+// playerOneName.textContent = prompt('Enter name for first player please: ');
+// playerTwoName.textContent = prompt('Enter name for second player please: ');
 // function to roll the dice
 const rollDice = () => {
   let random = Math.ceil(Math.random() * 6);
@@ -87,6 +87,7 @@ const holdScore = () => {
     );
     changePlayerTurn();
   }
+  diceEL.hidden = true;
 };
 
 // new button logic goes here, this button will reset whole values
@@ -101,6 +102,7 @@ const resetGame = () => {
   playerOne.classList.add('player--active');
   isPlayerTwoTurn = false;
   playerTwo.classList.remove('player--active');
+  diceEL.hidden = true;
 };
 
 const checkWinner = winner => {
